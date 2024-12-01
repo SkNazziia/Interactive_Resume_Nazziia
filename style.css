@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+
+    background-color: #EDF4F2; 
+    color: #31473A; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #31473A; 
+    color: #EDF4F2; 
+    position: fixed;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #EDF4F2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    color: #7C8363; 
+}
+
+.content {
+    margin-left: 220px; 
+    padding: 20px;
+    width: calc(100% - 240px);
+    flex-grow: 1;
+}
+
+.header-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #7C8363; 
+    color: #EDF4F2; 
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.content section {
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.content section:nth-child(odd) {
+    background-color: #EDF4F2; 
+}
+
+.content section:nth-child(even) {
+    background-color: #7C8363; 
+}
+
+.content h2 {
+    font-size: 1.5em;
+    color: #31473A; 
+    border-bottom: 2px solid #7C8363; 
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.content a {
+    color: #7C8363; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content a:hover {
+    color: #31473A; 
+}
+
+footer {
+    background-color: #31473A; 
+    color: #EDF4F2;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.header-content p {
+    margin: 10px 0;
+}
+
+.header-content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #EDF4F2;
+}
+
+.header-content a {
+    color: #EDF4F2;
+    text-decoration: none;
+}
+
+.header-content a:hover {
+    color: #31473A;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width for sidebar on small screens */
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%; /* Full width for content */
+        padding: 10px;
+    }
+
+    .sidebar ul li {
+        margin: 5px 0;
+    }
+
+    .header-content h1 {
+        font-size: 1.5em;
+    }
+
+    .content section {
+        padding: 10px;
+    }
+}
+
+/* Section Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section.visible {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
